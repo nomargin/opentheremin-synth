@@ -8,14 +8,13 @@
 
 - 動機：John Cageのテルミン奏者dis
 - 狙い：音色やエフェクトのコントロール、音以外も含めた多様な表現のために
-- CV出力、MIDI出力を備えたテルミン（メジャーなもの）
 <details>
-<summary>table</summary>
+<summary>CV出力、MIDI出力を備えた主なテルミン</summary>
 
 ||model|CV out|MIDI out|
 |--|--|--|--|
 |moog|Claravox Centennial|O  (Pitch,Vol)|O|
-|moog|Theremini|O  (Pitch *or*  Vol)|O|
+|moog|Theremini|O  (Pitch __or__  Vol)|O|
 |moog|Ehterwave (new, Plus)|O   (Pitch,Vol,Gate)|-|
 |GaudiLabs|OpenTheremin|O  (Pitch,Vol)|△|
 </details>
@@ -28,9 +27,10 @@
 <details>
 <summary></summary>
 
-- Etherwaveの波形取込み＆差し替え
-- https://twitter.com/hrsm/status/1635980539391016960
-- https://twitter.com/hrsm/status/1634918884951363584
+- OT内蔵の波形 https://twitter.com/hrsm/status/1635980539391016960
+- EWの波形をオシロ表示 https://twitter.com/hrsm/status/1634918884951363584
+- Etherwaveの波形取込み＆差し替え、ファームウェア（FW）書き込み　[fw01]
+- CV出力とは、オシロ表示
 - CV出力に何かを繋ぐ
 [KORG NTS-2](https://www.korg.com/jp/products/dj/nts_2/) | 
 [Bastle KASTLE](https://umbrella-company.jp/bastl-instruments-kastle-v1.5.html) | 
@@ -41,9 +41,10 @@
 <details>
 <summary></summary>
 
-- MIDIインタフェース基板追加 
+- MIDIインタフェース基板追加+はんだ付け
 [Seeed Studio XIAO RP2040](https://www.switch-science.com/products/7634)
 - ケースの3Dプリント 
+[CAD(Fusion360)](https://www.autodesk.co.jp/products/fusion-360/personal) | 
 [STL](https://github.com/nomargin/opentheremin-synth/blob/main/case/OTv4midi-case4.stl) | 材料=Resin A1 Pro, エコノミーナイロン | [発注](https://make.dmm.com/mypage/orders/)
 - https://twitter.com/hrsm/status/1657014608954290177
 - ファームウェア入れ替え
