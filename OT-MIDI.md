@@ -6,16 +6,24 @@
 <details>
 <summary></summary>
 
-- 動機：John Cageのテルミン奏者dis
-- 狙い：音色やエフェクトのコントロール、音以外も含めた多様な表現のために
+- 動機：John Cageのテルミニストdis
+(1937,[出典](https://archive.org/details/silencelecturesw1961cage/page/4/mode/2up?q=Theremin))
+<!--
+テルミン博士が真に新しい可能性を持つ楽器を提供したにもかかわらず、
+テルミニストはこの楽器を古い楽器のように聴かせることに全力を尽くし、
+気持ち悪いほど甘〜いビブラートをかけ、過去の名作を苦労して演奏している。
+テルミニスト＝検閲官によって、私たちは新しい音の体験から遮られている。
+-->
+
+- 狙い：音色やエフェクトの柔軟なコントロール、外部連携、音以外も含めた多様な表現のために
 <details>
-<summary>CV出力、MIDI出力を備えた主なテルミン</summary>
+<summary>CV出力、MIDI出力を備えた（主な）テルミン</summary>
 
 ||model|CV out|MIDI out|
 |--|--|--|--|
 |moog|Claravox Centennial|O  (Pitch,Vol)|O|
+|moog|Etherwave (new, Plus)|O   (Pitch,Vol,Gate)|-|
 |moog|Theremini|O  (Pitch __or__  Vol)|O|
-|moog|Ehterwave (new, Plus)|O   (Pitch,Vol,Gate)|-|
 |GaudiLabs|OpenTheremin|O  (Pitch,Vol)|△|
 </details>
 
@@ -42,15 +50,16 @@
 <summary></summary>
 
 - MIDIインタフェース基板追加+はんだ付け
-[Seeed Studio XIAO RP2040](https://www.switch-science.com/products/7634)
+[XIAO RP2040](https://www.switch-science.com/products/7634) | 
+[before/after](https://twitter.com/hrsm/status/1635315290937638914)
 - ケースの3Dプリント 
-[CAD(Fusion360)](https://www.autodesk.co.jp/products/fusion-360/personal) | 
-[STL](https://github.com/nomargin/opentheremin-synth/blob/main/case/OTv4midi-case4.stl) | 材料=Resin A1 Pro, エコノミーナイロン | [発注](https://make.dmm.com/mypage/orders/)
-- https://twitter.com/hrsm/status/1657014608954290177
+[CAD](https://www.autodesk.co.jp/products/fusion-360/personal) | 
+[STL](https://github.com/nomargin/opentheremin-synth/blob/main/case/OTv4midi-case4.stl) | 
+材料=[Resin A1 Pro](https://twitter.com/hrsm/status/1657014608954290177), 
+エコノミーナイロン | 
+[発注](https://make.dmm.com/mypage/orders/)
 - ファームウェア入れ替え
-
-- https://twitter.com/hrsm/status/1635315290937638914
-- 
+ 
 </details>
 
 
@@ -58,23 +67,22 @@
 <details>
 <summary></summary>
 
-- MIDIメッセージ、PITCH/VOLUMEデータのアサイン
+- テルミンの特徴を活かす
+- PITCH,VOLUMEデータのアサイン
 - その他のパラメータ追加
-- 演奏中のパラメータ変更 gamepad | smartRing
+- 演奏中のパラメータ変更 GamePad | GENKI Wave Ring | AppleWatch
 </details>
 
 ## OT-PC-PureData(Pd), Max
 [Pd](https://puredata.info/downloads/pure-data) | 
 [Cycling'74 Max](https://cycling74.com/products/max)
 
-- https://twitter.com/hrsm/status/1434858040449064961
+<!-- https://twitter.com/hrsm/status/1434858040449064961 -->
 - https://twitter.com/hrsm/status/1630948258364411905
-- https://twitter.com/hrsm/status/1634918884951363584
 
 - 両手でPITCH
 - VOLコントロールをパーカッシブに
 - velocity導入
-
 
 ## OT-スマホ-Pd
 [mobmuplat](https://danieliglesia.com/mobmuplat/)
@@ -103,10 +111,5 @@
 
 ***
 
-## 今回使用したファイル
-- 置き場所 [github](https://github.com/nomargin/opentheremin-synth)
-- Pd, Maxパッチ
-- Arduino ファームウェア
-- ケースの3Dデータ (STL)
-
+### 今回使用したファイルの置き場所 [github](https://github.com/nomargin/opentheremin-synth)
 
