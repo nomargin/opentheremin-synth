@@ -68,9 +68,9 @@
 <summary></summary>
 
 - テルミンの特徴を活かす
-- PITCH,VOLUMEデータのアサイン
+- PITCH,VOLデータのアサイン
 - その他のパラメータ追加
-- 演奏中のパラメータ変更 GamePad | GENKI Wave Ring | AppleWatch
+- 演奏中の操作 GamePad | GENKI Wave Ring | AppleWatch
 </details>
 
 ## OT-PC-PureData(Pd), Max
@@ -80,9 +80,12 @@
 <!-- https://twitter.com/hrsm/status/1434858040449064961 -->
 - https://twitter.com/hrsm/status/1630948258364411905
 
-- 両手でPITCH
-- VOLコントロールをパーカッシブに
 - velocity導入
+- VOLカーブを変える
+- PITCHずれの可視化
+- 両手でPITCH
+- haptic feedback
+
 
 ## OT-スマホ-Pd
 [mobmuplat](https://danieliglesia.com/mobmuplat/)
