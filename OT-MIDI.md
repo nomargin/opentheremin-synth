@@ -1,7 +1,11 @@
+---
+marp: true
+theme: gaia
+footer:"tes"
+---
 # テルミンのMIDI活用事例
-
 <!-- 適宜、デモ＆試奏を交えて -->
-
+---
 ## 導入
 <details>
 <summary></summary>
@@ -13,6 +17,7 @@
 気持ち悪いほど甘〜いビブラートをかけ、過去の名作を苦労して演奏している。
 テルミニスト＝検閲官によって、私たちは新しい音の体験から遮られている。
 -->
+---
 
 - 狙い：音色やエフェクトの柔軟なコントロール、外部連携、音以外も含めた多様な表現のために
 
@@ -25,39 +30,33 @@ CV出力、MIDI出力を備えた（主な）テルミン
 |moog|Theremini|O  (Pitch __or__  Vol)|O|
 |**GaudiLabs**|**OpenTheremin**|O  (Pitch,Vol)|△|
 
+</details>
 
 ---
-
-</details>
-
 ## OpenTheremin(OT)補足
-<details>
-<summary></summary>
+- [OT内蔵の波形](https://twitter.com/hrsm/status/1635980539391016960)
+- Audio出力→オシロ表示
+- [Wave Table Generator](https://www.gaudi.ch/WaveGenerator/)でお好みの波形を作成
+- [Etherwaveの波形](https://twitter.com/hrsm/status/1634918884951363584)
+- 波形差し替え&ファームウェア（FW）書き込み　[fw01]
+- CV出力→オシロ表示、その他何かをつなぐ
 
-- OT内蔵の波形 https://twitter.com/hrsm/status/1635980539391016960
-- EWの波形をオシロ表示 https://twitter.com/hrsm/status/1634918884951363584
-- Etherwaveの波形取込み＆差し替え、ファームウェア（FW）書き込み　[fw01]
-- CV出力とは、オシロ表示、何かをつなぐ
+オシロ KORG [NTS-2](https://www.korg.com/jp/products/dj/nts_2/) |
+Bastle [KASTLE](https://umbrella-company.jp/bastl-instruments-kastle-v1.5.html) | 
+<!--LittleBits [SynthKit](https://www.littlebits-jp.com/synth-kit)-->
+- ノイズ対策
 
-オシロ KORG [NTS-2](https://www.korg.com/jp/products/dj/nts_2/) 
-Bastle [KASTLE](https://umbrella-company.jp/bastl-instruments-kastle-v1.5.html) 
-LittleBits [SynthKit](https://www.littlebits-jp.com/synth-kit)
-</details>
-
+---
 ## OTのMIDI出力追加
 
 
 - MIDIインタフェース基板 XIAO [RP2040](https://www.switch-science.com/products/7634) + FW(fw02if)
 - [before/after](https://twitter.com/hrsm/status/1635315290937638914)
 - ケースの3Dプリント 
-CAD [Fusion360](https://www.autodesk.co.jp/products/fusion-360/personal) 
-モデルファイル [STL](https://github.com/nomargin/opentheremin-synth/blob/main/case/OTv4midi-case4.stl) 
-材料選択 [Resin A1 Pro](https://twitter.com/hrsm/status/1657014608954290177), エコノミーナイロン
-[発注](https://make.dmm.com/mypage/orders/)
-- FW変更 [オリジナル](https://raw.githubusercontent.com/MrDham/OpenTheremin_V3_with_MIDI/master/Quick%20guide%20open%20theremin%20midi.bmp)
-- 14bit-CC出力 (fw02)
- 
+オリジナル[by gaudi](https://www.thingiverse.com/thing:5022371) | 3D-CAD [Fusion360](https://www.autodesk.co.jp/products/fusion-360/personal) | MIDI対応ケース [STL](https://github.com/nomargin/opentheremin-synth/blob/main/case/OTv4midi-case4.stl) | 材料選択 [Resin A1 Pro](https://twitter.com/hrsm/status/1657014608954290177), エコノミーナイロン | [発注](https://make.dmm.com/mypage/orders/) ~ モデル修正のやりとり 
+- FW変更 [オリジナル](https://raw.githubusercontent.com/MrDham/OpenTheremin_V3_with_MIDI/master/Quick%20guide%20open%20theremin%20midi.bmp) 14bit-CC出力 (fw02)
 
+---
 ## MIDI出力に何かを繋ぐ
 
 - テルミンの特徴を活かす（動作との同期、音を操っている感）
@@ -67,8 +66,8 @@ CAD [Fusion360](https://www.autodesk.co.jp/products/fusion-360/personal)
 GamePad [8BitDo Zero2](https://www.8bitdo.com/zero2/) 
 Smart Ring [GENKI Wave Ring](https://twitter.com/hrsm/status/1510962165749981188) 
 AppleWatch App [Holon.ist](https://holon.ist/sensors/)
- 
 
+---
 ## OT-PC-PureData(Pd), Max
 [Pd](https://puredata.info/downloads/pure-data) | [Cycling'74 Max](https://cycling74.com/products/max)
 
@@ -81,6 +80,10 @@ AppleWatch App [Holon.ist](https://holon.ist/sensors/)
 - 擦弦楽器 [過去の失敗作](https://twitter.com/hrsm/status/1256485884989300736)　から物理モデリング導入へ
 - 両手でpitch
 - haptic feedback
+
+---
+## NSX-39
+大人の科学[ポケット・ミク](https://otonanokagaku.net/nsx39/)に繋いでテルミンに歌わせよう
 
 ## OT-スマホ-Pd
 [mobmuplat](https://danieliglesia.com/mobmuplat/)
@@ -104,7 +107,7 @@ Ableton Live
 文字を書いてみよう
 
 ## OT-PC-ロボット系の何か
-[Sony toio](https://toio.io/programming/#28) 
+[Sony toio](https://toio.io/programming/#28) | 
 [DJI Tello](https://www.ryzerobotics.com/jp/tello-edu)
 
 ## OT-PC-(wifi/ws)-スマホのWebブラウザ上のシンセ（複数台）
@@ -113,3 +116,6 @@ Ableton Live
 
 ### 今回使用したファイルの置き場所 [github](https://github.com/nomargin/opentheremin-synth)
 
+## まとめ
+- デジタルの利用
+- 手が足りない問題：自力（コントローラ・ジェスチャ）/DAW/他の誰か

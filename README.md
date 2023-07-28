@@ -1,4 +1,3 @@
 # opentheremin-synth
 
-
-how to connect OpenTheremin to anything
+Connect OpenTheremin to anything

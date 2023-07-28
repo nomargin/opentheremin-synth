@@ -1,0 +1,117 @@
+<mxfile host="65bd71144e">
+    <diagram name="Page-1" id="mCKAPrOSPwFmVCd63_bu">
+        <mxGraphModel dx="863" dy="520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="BCb_BVe6c_NoCeWcaDoo-31" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="180" width="250" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="BCb_BVe6c_NoCeWcaDoo-1" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.radio.aerial_-_antenna_2;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="127.5" width="29.5" height="52.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="BCb_BVe6c_NoCeWcaDoo-2" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.radio.loop_antenna;rotation=-90;" parent="1" vertex="1">
+                    <mxGeometry x="162.04" y="180" width="37.96" height="42.44" as="geometry"/>
+                </mxCell>
+                <mxCell id="BCb_BVe6c_NoCeWcaDoo-3" value="ピッチANT" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="97.5" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="BCb_BVe6c_NoCeWcaDoo-4" value="ボリュームANT" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="157.55" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="BCb_BVe6c_NoCeWcaDoo-9" value="" style="pointerEvents=1;verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;shape=mxgraph.electrical.electro-mechanical.loudspeaker;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="224.99" width="25" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="BCb_BVe6c_NoCeWcaDoo-11" value="アンプ" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="215.11" width="60" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="BCb_BVe6c_NoCeWcaDoo-12" value="スピーカー" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="680" y="185.11" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="BCb_BVe6c_NoCeWcaDoo-16" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="BCb_BVe6c_NoCeWcaDoo-31" target="BCb_BVe6c_NoCeWcaDoo-11" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="470" y="239.5" as="sourcePoint"/>
+                        <mxPoint x="530" y="239.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="BCb_BVe6c_NoCeWcaDoo-18" value="オーディオ信号" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="215.11" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="BCb_BVe6c_NoCeWcaDoo-19" value="CV/GATE信号" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="320" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="BCb_BVe6c_NoCeWcaDoo-23" value="エフェクタ" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="270" width="80" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="BCb_BVe6c_NoCeWcaDoo-25" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="BCb_BVe6c_NoCeWcaDoo-23" target="BCb_BVe6c_NoCeWcaDoo-11" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="640" y="344.71" as="sourcePoint"/>
+                        <mxPoint x="720" y="345.21" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="BCb_BVe6c_NoCeWcaDoo-26" value="MIDI機器：&lt;br&gt;デジタルシンセ、&lt;br&gt;PC・スマホ・タブレット&lt;br&gt;（ソフトシンセ・DAW）、&lt;br&gt;その他" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="360" width="210" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="BCb_BVe6c_NoCeWcaDoo-28" value="アナログ&lt;br&gt;シンセ" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="360" width="120" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="BCb_BVe6c_NoCeWcaDoo-30" value="MIDIデータ" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="320" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="BCb_BVe6c_NoCeWcaDoo-32" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="BCb_BVe6c_NoCeWcaDoo-31" target="BCb_BVe6c_NoCeWcaDoo-23" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="460" y="250" as="sourcePoint"/>
+                        <mxPoint x="660" y="250" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="BCb_BVe6c_NoCeWcaDoo-33" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.647;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.291;entryY=-0.002;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="BCb_BVe6c_NoCeWcaDoo-31" target="BCb_BVe6c_NoCeWcaDoo-26" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="280" y="310" as="sourcePoint"/>
+                        <mxPoint x="319" y="360" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="BCb_BVe6c_NoCeWcaDoo-34" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.647;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="240" y="300" as="sourcePoint"/>
+                        <mxPoint x="240" y="360" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="BCb_BVe6c_NoCeWcaDoo-35" value="テルミン" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="157.55" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="BCb_BVe6c_NoCeWcaDoo-37" value="MIDI OUT" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="270" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="BCb_BVe6c_NoCeWcaDoo-38" value="AUDIO OUT" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="340" y="224.99" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="BCb_BVe6c_NoCeWcaDoo-39" value="PITCH-CV&lt;br&gt;VOLUME-CV&lt;br&gt;GATE" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="240" width="140" height="55.11" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="GF93U2Q4DUS6oTkZujIh" name="Page-2">
+        <mxGraphModel dx="530" dy="267" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="_tr-xUu7fM4etA5z8JyV-4" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://files.seeedstudio.com/wiki/XIAO-RP2040/img/xinpin.jpg;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="203.11" width="246.06" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="_tr-xUu7fM4etA5z8JyV-2" value="" style="verticalLabelPosition=bottom;sketch=0;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;align=center;outlineConnect=0;shape=mxgraph.citrix.laptop_2;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="40" width="120.69" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="_tr-xUu7fM4etA5z8JyV-3" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://www.gaudi.ch/OpenTheremin/images/stories/OpenTheremin/OTV4/OpenThereminPCBBack.png;" vertex="1" parent="1">
+                    <mxGeometry x="580" y="80" width="156.96" height="396.22" as="geometry"/>
+                </mxCell>
+                <mxCell id="_tr-xUu7fM4etA5z8JyV-14" value="" style="endArrow=none;html=1;strokeColor=#FF0000;fillColor=#FF0000;curved=1;" edge="1" parent="1" source="_tr-xUu7fM4etA5z8JyV-4" target="_tr-xUu7fM4etA5z8JyV-3">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="490" y="240" as="sourcePoint"/>
+                        <mxPoint x="510" y="270" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
