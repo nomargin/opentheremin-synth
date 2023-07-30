@@ -1,10 +1,9 @@
----
+<!---
 marp: true
 theme: gaia
 footer:"tes"
----
+--->
 # テルミンのMIDI活用事例
-<!-- 適宜、デモ＆試奏を交えて -->
 ---
 ## 導入
 <details>
@@ -38,7 +37,7 @@ CV出力、MIDI出力を備えた（主な）テルミン
 - Audio出力→オシロ表示
 - [Wave Table Generator](https://www.gaudi.ch/WaveGenerator/)でお好みの波形を作成
 - [Etherwaveの波形](https://twitter.com/hrsm/status/1634918884951363584)
-- 波形差し替え&ファームウェア（FW）書き込み　[fw01]
+- 波形差し替え&ファームウェア（FW）書き込み
 - CV出力→オシロ表示、その他何かをつなぐ
 
 オシロ KORG [NTS-2](https://www.korg.com/jp/products/dj/nts_2/) |
@@ -54,7 +53,10 @@ Bastle [KASTLE](https://umbrella-company.jp/bastl-instruments-kastle-v1.5.html) 
 - [before/after](https://twitter.com/hrsm/status/1635315290937638914)
 - ケースの3Dプリント 
 オリジナル[by gaudi](https://www.thingiverse.com/thing:5022371) | 3D-CAD [Fusion360](https://www.autodesk.co.jp/products/fusion-360/personal) | MIDI対応ケース [STL](https://github.com/nomargin/opentheremin-synth/blob/main/case/OTv4midi-case4.stl) | 材料選択 [Resin A1 Pro](https://twitter.com/hrsm/status/1657014608954290177), エコノミーナイロン | [発注](https://make.dmm.com/mypage/orders/) ~ モデル修正のやりとり 
-- FW変更 [オリジナル](https://raw.githubusercontent.com/MrDham/OpenTheremin_V3_with_MIDI/master/Quick%20guide%20open%20theremin%20midi.bmp) 14bit-CC出力 (fw02)
+- FWの変更 
+[オリジナル](https://raw.githubusercontent.com/MrDham/OpenTheremin_V3_with_MIDI/master/Quick%20guide%20open%20theremin%20midi.bmp) 
+fw/OT4_midi_PV14: 本体側のUSB端子から書き込み
+fw/midi_fwd: RP2040のUSB端子から書き込み
 
 ---
 ## MIDI出力に何かを繋ぐ
@@ -75,47 +77,50 @@ AppleWatch App [Holon.ist](https://holon.ist/sensors/)
 <!-- https://twitter.com/hrsm/status/1434858040449064961 -->
 - https://twitter.com/hrsm/status/1630948258364411905
 - エフェクト：リバーブ・ディレイ、フィルタ、サンプラー
-- volカーブを変える、velocityの導入
-- [pitchズレの可視化](https://www.youtube.com/watch?v=sdA-xh-cczo) audio->midi
+- vol/pitchカーブを変える 
+<!-- velocityの導入 -->
+- [pitchズレの可視化](https://www.youtube.com/watch?v=sdA-xh-cczo) 
 - 擦弦楽器 [過去の失敗作](https://twitter.com/hrsm/status/1256485884989300736)　から物理モデリング導入へ
-- 両手でpitch
-- haptic feedback
+<!-- 両手でpitch 
+haptic feedback-->
 
 ---
-## NSX-39
+## OT-PC-Pd-NSX39
 大人の科学[ポケット・ミク](https://otonanokagaku.net/nsx39/)に繋いでテルミンに歌わせよう
+歌詞情報の同期再生
+[サンプル曲](https://youtu.be/P2sz72szwRA)
 
-## OT-スマホ-Pd
-[mobmuplat](https://danieliglesia.com/mobmuplat/)
+## OT-{iPhone|Android}-Pd
+スマホで動作するPd環境 [mobmuplat](https://danieliglesia.com/mobmuplat/)
 
 ## OT-PC-ソフトシンセ
-[VCV Rack2](https://vcvrack.com/Rack)
+Virtual EuroRack Studio [VCV Rack2](https://vcvrack.com/Rack)
 
-## OT-iPhone/iPad-シンセアプリ
+## OT-{iPhone|iPad}アプリ
 [moog Model 15](https://apps.apple.com/jp/app/model-15-modular-synthesizer/id1041465860) | 
 [miRack](https://mirack.app/)
 
 ## OT-PC-DAW
-Apple Logic Pro X
-Ableton Live
+Apple Logic Pro X | Ableton Live
 
 *** 
 以下、番外編（未定）
 
-## OT-PC-Visual系の何か(お絵描き)
+## OT-PC-Visual系の何か
 [Processing](https://processing.org/)
-文字を書いてみよう
+お絵描き・文字を書いてみよう
 
-## OT-PC-ロボット系の何か
+## OT-PC-ロボット系の何かを動かそう
 [Sony toio](https://toio.io/programming/#28) | 
-[DJI Tello](https://www.ryzerobotics.com/jp/tello-edu)
+ミニドローン [DJI Tello](https://www.ryzerobotics.com/jp/tello-edu)
 
-## OT-PC-(wifi/ws)-スマホのWebブラウザ上のシンセ（複数台）
+## OT-PC~~スマホのWebブラウザ上のシンセ
+WiFi経由で演奏情報を配信してみよう
 
 ***
 
-### 今回使用したファイルの置き場所 [github](https://github.com/nomargin/opentheremin-synth)
-
 ## まとめ
-- デジタルの利用
-- 手が足りない問題：自力（コントローラ・ジェスチャ）/DAW/他の誰か
+- デジタルな演奏データの活用、外部連携
+- 手が足りない問題：自力（コントローラ追加・ジェスチャ認識）/DAWのシーケンス援用/他の誰か　によるパラメータ操作
+
+### 今回使用したファイルの置き場所 [github](https://github.com/nomargin/opentheremin-synth)
