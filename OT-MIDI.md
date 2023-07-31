@@ -29,7 +29,9 @@ CV出力、MIDI出力を備えた（主な）テルミン
 |moog|Theremini|O  (Pitch __or__  Vol)|O|
 |**GaudiLabs**|**OpenTheremin**|O  (Pitch,Vol)|△|
 
+今回の話題はClaravox, Thereminiでも適用可（たぶん）
 </details>
+
 
 ---
 ## OpenTheremin(OT)補足
@@ -43,18 +45,24 @@ CV出力、MIDI出力を備えた（主な）テルミン
 オシロ KORG [NTS-2](https://www.korg.com/jp/products/dj/nts_2/) |
 Bastle [KASTLE](https://umbrella-company.jp/bastl-instruments-kastle-v1.5.html) | 
 <!--LittleBits [SynthKit](https://www.littlebits-jp.com/synth-kit)-->
-- ノイズ対策
+- ノイズ対策：アース(GND)接続以外に、OTとケーブルで繋がっている機器（PCなど）のACアダプタに注意。できればバッテリ駆動が望ましい。
 
 ---
 ## OTのMIDI出力追加
 
 
-- MIDIインタフェース基板 XIAO [RP2040](https://www.switch-science.com/products/7634) + FW(fw02if)
-- [before/after](https://twitter.com/hrsm/status/1635315290937638914)
+- MIDIインタフェース基板 XIAO [RP2040](https://www.switch-science.com/products/7634) 
+- USB Type-C端子の採用 [before/after](https://twitter.com/hrsm/status/1635315290937638914) はんだ付けで結線3本
 - ケースの3Dプリント 
-オリジナル[by gaudi](https://www.thingiverse.com/thing:5022371) | 3D-CAD [Fusion360](https://www.autodesk.co.jp/products/fusion-360/personal) | MIDI対応ケース [STL](https://github.com/nomargin/opentheremin-synth/blob/main/case/OTv4midi-case4.stl) | 材料選択 [Resin A1 Pro](https://twitter.com/hrsm/status/1657014608954290177), エコノミーナイロン | [発注](https://make.dmm.com/mypage/orders/) ~ モデル修正のやりとり 
+オリジナル[by gaudi](https://www.thingiverse.com/thing:5022371)を元に
+3D-CAD [Fusion360](https://www.autodesk.co.jp/products/fusion-360/personal) | MIDI対応ケース [STL](https://github.com/nomargin/opentheremin-synth/blob/main/case/OTv4midi-case4.stl) | [プリントセンター入稿](https://make.dmm.com/mypage/orders/) 
+材料選択：
+- [Resin A1 Pro](https://twitter.com/hrsm/status/1657014608954290177)(￥2700~) ただしモデルを分割出力〜自分で接着　が必要
+- エコノミーナイロン(￥6500~) 一体で出力
+- 担当者とモデル修正のやりとり (厚さ不足による反り、変形などの対応)
+
 - FWの変更 
-[オリジナル](https://raw.githubusercontent.com/MrDham/OpenTheremin_V3_with_MIDI/master/Quick%20guide%20open%20theremin%20midi.bmp) 
+[オリジナル](https://raw.githubusercontent.com/MrDham/OpenTheremin_V3_with_MIDI/master/Quick%20guide%20open%20theremin%20midi.bmp) を元にMIDI出力対応の変更
 fw/OT4_midi_PV14: 本体側のUSB端子から書き込み
 fw/midi_fwd: RP2040のUSB端子から書き込み
 
@@ -62,46 +70,67 @@ fw/midi_fwd: RP2040のUSB端子から書き込み
 ## MIDI出力に何かを繋ぐ
 
 - テルミンの特徴を活かす（動作との同期、音を操っている感）
-- pitch,volデータのアサイン
-- その他のパラメータのコントロール
-- 演奏中の操作のために 
-GamePad [8BitDo Zero2](https://www.8bitdo.com/zero2/) 
+- ポイント：滑らかな変化（連続=高分解能ピッチ、低遅延）、リニアリティ（等間隔）
+〜ピッチ・ボリュームの値を14bit幅のデータとして取り込み＋補間
+- DAWとの連携：Apple Logic Pro X | Ableton Live
+- その他のパラメータ操作のためのコントローラ（演奏を邪魔しない）
 Smart Ring [GENKI Wave Ring](https://twitter.com/hrsm/status/1510962165749981188) 
 AppleWatch App [Holon.ist](https://holon.ist/sensors/)
 
+
 ---
-## OT-PC-PureData(Pd), Max
-[Pd](https://puredata.info/downloads/pure-data) | [Cycling'74 Max](https://cycling74.com/products/max)
-
-
+## OT-PC-PureData(Pd)ほか
+MIDIメッセージをお好みで料理する
+[ここ](https://puredata.info/downloads/pure-data)からPd（フリー）をダウンロードしてPC(Win/Mac)にインストール
+<!--| [Cycling'74 Max](https://cycling74.com/products/max) -->
 <!-- https://twitter.com/hrsm/status/1434858040449064961 -->
-- https://twitter.com/hrsm/status/1630948258364411905
-- エフェクト：リバーブ・ディレイ、フィルタ、サンプラー
-- vol/pitchカーブを変える 
+- Pdと同類のソフト[Cycling74 Max](https://twitter.com/hrsm/status/1630948258364411905)（有料）での動作例
+- オシレータ、エフェクトなどのPdの部品や、VST/AUプラグインのパラメータへの割り当て
+- MIDIデータのスケール変換、ピッチ・ボリュームのレスポンスカーブ調整
+- 擦弦楽器： [過去の失敗作](https://twitter.com/hrsm/status/1256485884989300736)　からの物理モデリング音源の導入へ、弓動作の再現
+- Ableton Live/M4L [ピッチずれの可視化](https://www.youtube.com/watch?v=sdA-xh-cczo) 
+<!-- 両手でpitch haptic feedback-->
 <!-- velocityの導入 -->
-- [pitchズレの可視化](https://www.youtube.com/watch?v=sdA-xh-cczo) 
-- 擦弦楽器 [過去の失敗作](https://twitter.com/hrsm/status/1256485884989300736)　から物理モデリング導入へ
-<!-- 両手でpitch 
-haptic feedback-->
 
 ---
 ## OT-PC-Pd-NSX39
-大人の科学[ポケット・ミク](https://otonanokagaku.net/nsx39/)に繋いでテルミンに歌わせよう
-歌詞情報の同期再生
-[サンプル曲](https://youtu.be/P2sz72szwRA)
+大人の科学[ポケット・ミク](https://otonanokagaku.net/nsx39/)に繋いでテルミンに（で）歌わせよう　
+- PC(Win/Mac)にPdをインストールし、OTとNSX39をPCにUSB接続
+- Pdを起動して、パッチファイル：pd/nsx-39.pdを開く
+- MIDIポートの設定：Media>MIDI Settings...>Input = XIAO RP2040
+Output = NSX-39、Save All Settingsしておけば以降も設定は有効
+- Startを押すと、カラオケ音源aiffとmidiファイルが同期再生し、歌詞が１文字ごとミクに逐次送信される
+- OTでミクのピッチ・ボリュームをコントロールする
+- [パッチの説明](pd/nsx-39.pdf)
+- [サンプル曲](https://youtu.be/P2sz72szwRA)
+
 
 ## OT-{iPhone|Android}-Pd
-スマホで動作するPd環境 [mobmuplat](https://danieliglesia.com/mobmuplat/)
+スマホ上でも動作するPd環境 
+- AppStoreで[mobmuplat](https://danieliglesia.com/mobmuplat/)をインストール
+- USBでPCにスマホ接続
+- mobフォルダ以下のファイルをスマホのmobmuplat配下のフォルダにコピーしてケーブル外す
+- OTをスマホにUSB接続(iPhoneの場合Lightning-USB変換)し、アプリmobmuplat起動
+- 設定>Audio/MIDI>
+- Select MIDI Input = XIAO RP2040 
+- Audio Buffer Size = 32
+- Select Document > OT.mmp
+- [tw](https://twitter.com/hrsm/status/1639640535337168896)
+- [tw](https://twitter.com/hrsm/status/1632759321804279809)
 
-## OT-PC-ソフトシンセ
+## OT-PC-モジュラー（ソフト）シンセ
 Virtual EuroRack Studio [VCV Rack2](https://vcvrack.com/Rack)
+- Rack 2 Free版をインストール
+- OTをPCに接続
+- vcv/OTv4-PV14-B.vcvを開く 
+- [tw](https://twitter.com/hrsm/status/1657545338763505664)
 
 ## OT-{iPhone|iPad}アプリ
 [moog Model 15](https://apps.apple.com/jp/app/model-15-modular-synthesizer/id1041465860) | 
 [miRack](https://mirack.app/)
-
-## OT-PC-DAW
-Apple Logic Pro X | Ableton Live
+- AppStoreでアプリをインストール
+- OTとUSB接続
+- アプリ起動
 
 *** 
 以下、番外編（未定）
@@ -120,7 +149,10 @@ WiFi経由で演奏情報を配信してみよう
 ***
 
 ## まとめ
-- デジタルな演奏データの活用、外部連携
-- 手が足りない問題：自力（コントローラ追加・ジェスチャ認識）/DAWのシーケンス援用/他の誰か　によるパラメータ操作
+- MIDIで手軽に外部連携していろいろ遊べる（CVよりも料理しやすい）
+- パラメータ操作で演者の手が足りない問題
+自力（コントローラ追加・ハンドジェスチャ認識）/ DAWのシーケンス援用 / 他の誰か　など
 
-### 今回使用したファイルの置き場所 [github](https://github.com/nomargin/opentheremin-synth)
+### 今回使用したファイル
+- 置き場所 [github](https://github.com/nomargin/opentheremin-synth)
+- 緑のボタン(Code) を押して、Download ZIPで丸ごとローカルに保存
