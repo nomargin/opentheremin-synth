@@ -47,23 +47,22 @@ CV出力、MIDI出力を備えた（主な）テルミン
 ---
 ## OTのMIDI出力追加
 
-
 - MIDIインタフェース基板 XIAO [RP2040](https://www.switch-science.com/products/7634) 
 - USB Type-C端子の採用 [before/after](https://twitter.com/hrsm/status/1635315290937638914) はんだ付けで結線3本
 - ケースの3Dプリント 
-  - オリジナル[by gaudi](https://www.thingiverse.com/thing:5022371)を元に | 
+  - オリジナル[by gaudi](https://www.thingiverse.com/thing:5022371)を元に 
   - 3D-CAD [Fusion360](https://www.autodesk.co.jp/products/fusion-360/personal) 
   - MIDI対応ケース [STL](https://github.com/nomargin/opentheremin-synth/blob/main/case/OTv4midi-case4.stl) 
   - [プリントセンター入稿](https://make.dmm.com/mypage/orders/) 
 
-- 材料選択：
+- 材料選択
   - [Resin A1 Pro](https://twitter.com/hrsm/status/1657014608954290177)(￥2700~) ただしモデルを分割出力〜自分で接着　が必要
   - エコノミーナイロン(￥6500~) 一体で出力
   - 担当者とモデル修正のやりとり (厚さ不足による反り、変形などの対応)
 
-- FWの変更：
-　- [オリジナル](https://raw.githubusercontent.com/MrDham/OpenTheremin_V3_with_MIDI/master/Quick%20guide%20open%20theremin%20midi.bmp) を元にMIDI出力対応の変更 
-  - fw/OT4_midi_PV14: 本体側のUSB端子から書き込み | 
+- FWの変更
+  - [オリジナル](https://raw.githubusercontent.com/MrDham/OpenTheremin_V3_with_MIDI/master/Quick%20guide%20open%20theremin%20midi.bmp) を元にMIDI出力対応の変更 
+  - fw/OT4_midi_PV14: 本体側のUSB端子から書き込み
   - fw/midi_fwd: RP2040のUSB端子から書き込み
 
 ---
