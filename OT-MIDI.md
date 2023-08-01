@@ -37,10 +37,10 @@ CV出力、MIDI出力を備えた（主な）テルミン
 ## OpenTheremin(OT)補足
 - [OT内蔵の波形](https://twitter.com/hrsm/status/1635980539391016960)
 - [Etherwaveの波形](https://twitter.com/hrsm/status/1634918884951363584)をオシロで
-- [Wave Table Generator](https://www.gaudi.ch/WaveGenerator/)でお好みの波形を作成してファームウェア（FW）書込み可
+- [Wave Table Generator](https://www.gaudi.ch/WaveGenerator/)でお好みの波形を作成してファームウェア（FW）書込み
 - CV出力（DC）に何かを繋ぐ：オシロ KORG [NTS-2](https://www.korg.com/jp/products/dj/nts_2/) | Bastle [KASTLE](https://umbrella-company.jp/bastl-instruments-kastle-v1.5.html) 
 <!--LittleBits [SynthKit](https://www.littlebits-jp.com/synth-kit)-->
-- ノイズ対策：アース(GND)接続以外に、OTとケーブルで繋がっている機器（PCなど）のACアダプタに注意。バッテリ駆動が望ましい。
+- ノイズ対策：アース(GND)接続以外にOTとケーブルで繋がっている機器（PCなど）のACアダプタに注意．バッテリ駆動が望ましい
 
 ---
 ## OTのMIDI出力追加
@@ -57,9 +57,9 @@ CV出力、MIDI出力を備えた（主な）テルミン
     - エコノミーナイロン(￥6500~) 一体で出力
   - 担当者とモデル修正のやりとり (厚さ不足による反り、変形などの対応)
 - FWの変更
-  - [オリジナル](https://raw.githubusercontent.com/MrDham/OpenTheremin_V3_with_MIDI/master/Quick%20guide%20open%20theremin%20midi.bmp) を元にMIDI出力対応の変更 
-  - fw/OT4_midi_PV14: 本体側のUSB端子から書き込み
-  - fw/midi_fwd: RP2040のUSB端子から書き込み
+  - [オリジナルFW](https://raw.githubusercontent.com/MrDham/OpenTheremin_V3_with_MIDI/master/Quick%20guide%20open%20theremin%20midi.bmp) を元にMIDI出力対応の変更 
+  - fw/OT4_midi_PV14 : 本体側のUSB端子から書き込み
+  - fw/midi_fwd : RP2040のUSB端子から書き込み
 
 ---
 ## MIDI出力に何かを繋ぐ
@@ -67,7 +67,7 @@ CV出力、MIDI出力を備えた（主な）テルミン
 - テルミンの特徴を活かす（動作との同期、音を操っている感など）
 - ポイント：滑らかな変化、高分解能（14bit）ピッチ/ボリューム、低遅延、リニアリティ（等間隔）
 - MIDIデータを処理できるPCソフト（開発環境,DAW,プラグイン）,スマホアプリ
-- オシレータ、エフェクトなどの部品や、VST/AUプラグインのパラメータへの割り当て、スケール変換、レスポンスカーブ
+- オシレータ・エフェクトなどの部品，VST/AUプラグインのパラメータへの割り当て，スケール変換・レスポンスカーブ
 - DAW連携：Apple Logic Pro X | Ableton Live など
 - その他のパラメータ操作のためのコントローラ（演奏を邪魔しない）
   - Smart Ring [GENKI Wave Ring](https://genkiinstruments.com/products/wave) 
@@ -80,8 +80,8 @@ MIDIメッセージをお好みで料理する環境
 <!--| [Cycling'74 Max](https://cycling74.com/products/max) -->
 <!-- https://twitter.com/hrsm/status/1434858040449064961 -->
 - Pdと同類のソフト[Cycling74 Max](https://twitter.com/hrsm/status/1630948258364411905)での動作例
-- 擦弦楽器： [過去の失敗作](https://twitter.com/hrsm/status/1256485884989300736)　からの物理モデリング音源の導入へ、弓動作の再現
-- Ableton Live [ピッチずれを可視化する]M4L(https://www.youtube.com/watch?v=sdA-xh-cczo) 
+- 擦弦楽器： [過去の失敗作](https://twitter.com/hrsm/status/1256485884989300736)　からの物理モデリング音源の導入へ，弓動作の再現
+- Ableton Live M4L [ピッチずれを可視化する](https://www.youtube.com/watch?v=sdA-xh-cczo) 
 <!-- 両手でpitch haptic feedback-->
 <!-- velocityの導入 -->
 
@@ -94,7 +94,7 @@ MIDIメッセージをお好みで料理する環境
   - Input = XIAO RP2040
   - Output = NSX-39
   - Save All Settings しておけば以降も設定有効
-- Startを押すと、カラオケ音源aiffとmidiファイルが同期再生し、歌詞が１文字ごとミクに送信される
+- Startを押すとカラオケ音源aiffとmidiファイルが同期再生．歌詞が１文字ごとミクに送信される
 - OTでミクのピッチ・ボリュームをコントロールする
 - [パッチの説明](pd/nsx-39.pdf)
 - [サンプル曲](https://youtu.be/P2sz72szwRA)
@@ -153,4 +153,4 @@ WiFi経由で演奏情報を配信してみよう
 
 ### 今回使用したファイル
 - 置き場所 [github](https://github.com/nomargin/opentheremin-synth)
-- 緑のボタン(Code) を押して、Download ZIPで丸ごとローカルに保存
+- 緑のボタン(Code) を押す．Download ZIPで丸ごとローカルに保存
